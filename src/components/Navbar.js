@@ -26,7 +26,7 @@ function NavBar() {
     }
    
   }
-
+  window.addEventListener("scroll", scrollHandler);
 
   return(
     <Navbar
@@ -34,10 +34,11 @@ function NavBar() {
     fixed="top"
     expand="md"
     className={navColour ? "sticky" : "navbar"}
-  >
+    style={{fontSize:' x-large',height:4 + 'em'}}>
+  
     <Container>
     <Navbar.Brand href="/" className="d-flex">
-          <div className="img-fluid logo" alt="brand">PG</div> 
+          <div className="img-fluid logo"   style={{ color: 'white', fontSize:' x-large'}} alt="brand">PG</div> 
         </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
@@ -52,16 +53,17 @@ function NavBar() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto" defaultActiveKey="#home">
           <Nav.Item>
-            <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-              <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+            <Nav.Link as={Link}    style={{ color: 'white'}} to="/" onClick={() => updateExpanded(false)}>
+              <AiOutlineHome style={{ marginBottom: "2px"}} /> Home
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item >
             <Nav.Link
               as={Link}
               to="/about"
               onClick={() => updateExpanded(false)}
+              style={{ color: 'white'}}
             >
               <AiOutlineUser style={{ marginBottom: "2px" }} /> About
             </Nav.Link>
@@ -72,6 +74,7 @@ function NavBar() {
               as={Link}
               to="/project"
               onClick={() => updateExpanded(false)}
+              style={{ color: 'white'}}
             >
               <AiOutlineFundProjectionScreen
                 style={{ marginBottom: "2px" }}
@@ -85,6 +88,7 @@ function NavBar() {
               as={Link}
               to="/resume"
               onClick={() => updateExpanded(false)}
+              style={{ color: 'white'}}
             >
               <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
             </Nav.Link>

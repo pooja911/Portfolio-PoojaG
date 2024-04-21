@@ -18,7 +18,7 @@ import NavBar from './components/Navbar';
 function App() {
   return (
     <Router>
-      <div>
+      <div style={{backgroundColor: 'cornflowerblue'}}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />}  />
