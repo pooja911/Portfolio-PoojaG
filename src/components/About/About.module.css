@@ -20,6 +20,20 @@
     font-family: system-ui;;
     font-size: 0.8em;
 }
+.TechImg{
+    display: flex;
+    font-size: 2em;
+    border: 1.4px solid;
+    /* height: 4em; */
+    justify-content: center;
+    vertical-align: middle;
+    border-radius: 0.2em;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    margin: 1em;
+    height: 1.5em;
+    padding-top: 0.2em;
+}
 
 .laptopImg{
     max-width: 86%;

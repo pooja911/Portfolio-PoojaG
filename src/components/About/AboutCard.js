@@ -18,7 +18,7 @@ function AboutCard() {
             Prior to that, I interned with the same firm as a software engineer Intern while pursuing my bachelor's degree, and later, I was hired on as a full-time employee.
             <br />
             
-            I have completed Bachelor's in Information Technology from Pune Universitry, India with an overall CGPA of 9.06 or an german grade of 1.4!
+            I have completed Bachelor's in Information Technology from Pune Universitry, India with an overall CGPA of 9.06 and an german grade of 1.4!
             <br />
             
             Apart from coding, some other activities that I love to do!
@@ -35,9 +35,9 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          {/* <p style={{ color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
-          </p>
+          </p> */}
           {/* <footer className="blockquote-footer"></footer> */}
         </blockquote>
       </Card.Body>
