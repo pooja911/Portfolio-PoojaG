@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
 import Container from "react-bootstrap/Container";
 // import logo from "../Assets/logo.png";
+import pdf from "../../Assets/PoojaGargResume.pdf";
+import { AiOutlineDownload } from "react-icons/ai";
 
 import styles from './Navbar.module.css';
 import {
@@ -18,6 +20,16 @@ import {
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+
+  const handleDownload = () => {
+    const pdfUrl = pdf;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "PoojaGargResume.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -89,12 +101,13 @@ function NavBar() {
           <Nav.Item className={`${styles.btnmanage}`}>
             <Nav.Link
               as={Link}
-              to="/resume"
-              onClick={() => updateExpanded(false)}
+              // to="/resume"
+              // onClick={() => updateExpanded(false)}
+              onClick={handleDownload}
               // style={{ color: 'deeppink'}}
               className={`${styles.neonbutton}`}
             >
-              <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              <AiOutlineDownload style={{ marginBottom: "2px" }} />Download CV
             </Nav.Link>
           </Nav.Item>
 
