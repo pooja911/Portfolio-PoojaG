@@ -1,0 +1,35 @@
+/* header {
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body {
+    background-color: #000000;
+    font-family: 'Pacifico', cursive;
+  } */
+  
+  .neontext {
+    animation: neon 3s infinite alternate;
+    /* text-align: center; */
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  @keyframes neon {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 
+      #FFFFFF 0 0 12px,
+      #A91079 0 0 25px,
+      #A91079 0 0 35px,
+      #A91079 0 0 45px;
+    }
+  
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+  }
+  
+  

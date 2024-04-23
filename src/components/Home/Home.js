@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/wordpress-developer.png";
+import style from "./Home.module.css";
 
 const Home = () => {
   return (
@@ -9,14 +10,15 @@ const Home = () => {
     <Container className="home-content" style={{marginTop:  4 +'em'}}>
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+              <h1 style={{ paddingBottom: 15 }} className={  ` ${style.neontext} heading`} >
+              {/* <h1 style={{ paddingBottom: 15 }} className={ 'heading'}> */}
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className={  ` ${style.neontext} heading-name`}>
                 I'M
                 <strong className="main-name"> Pooja Garg</strong>
               </h1>

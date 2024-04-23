@@ -13,12 +13,12 @@ import Projects from "./components/Projects/Project";
 import Resume from "./components/Resume/Resume";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import NavBar from './components/Navbar';
+import NavBar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <Router>
-      <div style={{background: '#808080'}}>
+      <div style={{background: 'black'}}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />}  />

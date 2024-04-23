@@ -5,8 +5,9 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { CgFileDocument } from "react-icons/cg";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+// import logo from "../Assets/logo.png";
 
+import styles from './Navbar.module.css';
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -34,11 +35,11 @@ function NavBar() {
     fixed="top"
     expand="md"
     className={navColour ? "sticky" : "navbar"}
-    style={{fontSize:' x-large',height:4 + 'em', backgroundColor: '#c4aead'}}>
+    style={{fontSize:' x-large',height:4 + 'em', backgroundColor: 'black'}}>
   
     <Container>
     <Navbar.Brand href="/" className="d-flex">
-          <div className="img-fluid logo"   style={{ color: 'white', fontSize:' x-large'}} alt="brand">PG</div> 
+          <div className="img-fluid logo"   style={{ color: 'deeppink', fontSize:' x-large'}} alt="brand">PG</div> 
         </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
@@ -52,29 +53,31 @@ function NavBar() {
       </Navbar.Toggle>
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ms-auto" defaultActiveKey="#home">
-          <Nav.Item>
-            <Nav.Link as={Link}    style={{ color: 'white'}} to="/" onClick={() => updateExpanded(false)}>
+          <Nav.Item className={`${styles.btnmanage}`}>
+            <Nav.Link as={Link}      className={`${styles.neonbutton}`} to="/" onClick={() => updateExpanded(false)}>
               <AiOutlineHome style={{ marginBottom: "2px"}} /> Home
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item >
+          <Nav.Item  className={`${styles.btnmanage}`}>
             <Nav.Link
               as={Link}
               to="/about"
               onClick={() => updateExpanded(false)}
-              style={{ color: 'white'}}
+              // style={{ color: 'white'}}
+              className={`${styles.neonbutton}`}
             >
               <AiOutlineUser style={{ marginBottom: "2px" }} /> About
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item className={`${styles.btnmanage}`}>
             <Nav.Link
               as={Link}
               to="/project"
               onClick={() => updateExpanded(false)}
-              style={{ color: 'white'}}
+              // style={{ color: 'deeppink'}}
+              className={`${styles.neonbutton}`}
             >
               <AiOutlineFundProjectionScreen
                 style={{ marginBottom: "2px" }}
@@ -83,12 +86,13 @@ function NavBar() {
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item className={`${styles.btnmanage}`}>
             <Nav.Link
               as={Link}
               to="/resume"
               onClick={() => updateExpanded(false)}
-              style={{ color: 'white'}}
+              // style={{ color: 'deeppink'}}
+              className={`${styles.neonbutton}`}
             >
               <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
             </Nav.Link>
