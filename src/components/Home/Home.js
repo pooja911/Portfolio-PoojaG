@@ -7,7 +7,7 @@ import Type from './Type';
 const Home = () => {
   return (
    <section>
-    <Container fluid className="home-section" id="home" style={{padding:  9 +'em'}}>
+    <Container fluid  className = {`${style.headCont} home-section`} id="home" >
     <Container className={` ${style.homec} home-content `}>
           <Row>
             <Col md={7} sm={4}  className="home-header">

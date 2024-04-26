@@ -10,7 +10,20 @@
     background-color: #000000;
     font-family: 'Pacifico', cursive;
   } */
-  
+
+  .headCont
+  {
+    padding: 9em;
+  }
+  @media screen and (max-width: 600px) {
+   .headCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   }
+
+  }
   .neontext {
     animation: neon 3s infinite alternate;
     /* text-align: center; */
