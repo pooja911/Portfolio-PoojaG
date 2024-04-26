@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/wordpress-developer.png";
 import style from "./Home.module.css";
+import Type from './Type';
 
 const Home = () => {
   return (
@@ -11,7 +12,6 @@ const Home = () => {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className={  ` ${style.neontext} heading`} >
-              {/* <h1 style={{ paddingBottom: 15 }} className={ 'heading'}> */}
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -19,12 +19,13 @@ const Home = () => {
               </h1>
 
               <h1 className={  ` ${style.neontext} heading-name`}>
-                I'M
+                I'M &nbsp;
                 <strong className="main-name"> Pooja Garg</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
-                {/* <Type /> */}
+              <div style={{ marginTop:'1em', textAlign: "left", color:'deeppink',fontSize:'2em',display:'flex' }}>
+              {/* "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things." */}
+              <Type/>
               </div>
             </Col>
 
@@ -33,7 +34,7 @@ const Home = () => {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ maxHeight: "20em" }}
               />
             </Col>
           </Row>
