@@ -47,11 +47,11 @@ function NavBar() {
     fixed="top"
     expand="md"
     className={navColour ? "sticky" : "navbar"}
-    style={{fontSize:' x-large',height:4 + 'em', backgroundColor: 'black'}}>
+    style={{fontSize:' large',height:4 + 'em', backgroundColor: 'black'}}>
   
     <Container>
     <Navbar.Brand href="/" className="d-flex">
-          <div className="img-fluid logo"   style={{ color: 'deeppink', fontSize:' x-large'}} alt="brand">PG</div> 
+          <div className="img-fluid logo"   style={{ color: 'deeppink', fontSize:' large'}} alt="brand">PG</div> 
         </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
@@ -86,7 +86,7 @@ function NavBar() {
           <Nav.Item className={`${styles.btnmanage}`}>
             <Nav.Link
               as={Link}
-              to="/project"
+              to="/ProfessionalExposure"
               onClick={() => updateExpanded(false)}
               // style={{ color: 'deeppink'}}
               className={`${styles.neonbutton}`}
@@ -94,7 +94,7 @@ function NavBar() {
               <AiOutlineFundProjectionScreen
                 style={{ marginBottom: "2px" }}
               />{" "}
-              Projects
+              Professional Exposure
             </Nav.Link>
           </Nav.Item>
 

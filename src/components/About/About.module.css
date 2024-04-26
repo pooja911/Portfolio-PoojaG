@@ -12,7 +12,7 @@
 }
 .imgset{
     padding-top: 13em;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     padding-left: 5em;
 }
 .cardTxt{
@@ -23,7 +23,7 @@
 .TechImg{
     display: flex;
     font-size: 2em;
-    border: 1.4px solid;
+    border: 1.4px solid purple;
     /* height: 4em; */
     justify-content: center;
     vertical-align: middle;
