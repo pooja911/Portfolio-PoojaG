@@ -24,4 +24,17 @@
     /* height: 100%; */
     /* color: deeppink; */
     /* background-color: aquamarine; */
+        /* @media (max-width: 767px) {
+            width: 0;
+            margin-left: 0;
+        } */
 }
+
+@media screen and (max-width: 600px) {
+    .data{
+      width: none;
+      margin-left: 0%;
+      display: contents;
+      border: 1px solid;
+    }
+  }

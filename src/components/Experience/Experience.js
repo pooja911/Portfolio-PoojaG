@@ -25,10 +25,11 @@ const Experience = () => {
 
   return (
     <>
-      <div className={`${styles.exp}`}>
+     <Container fluid className="project-section">
+      <div className={`${styles.exp} project-card`}>
         <h2>Experience</h2>
         {experiences.map((exp, index) => (
-          <div key={index} className={`${styles.data}`}>
+          <div key={index} className={`${styles.data} project-card-view`}>
             <h3>{exp.company}</h3>
             <p>
               <strong>{exp.position}</strong>
@@ -40,6 +41,7 @@ const Experience = () => {
         ))}
         <break />
       </div>
+      </Container>
     </>
   );
 };
