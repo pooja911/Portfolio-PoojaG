@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 600px) {
     .data{
-      width: none;
+      width: auto;
       margin-left: 0%;
       /* display: contents; */
       border: 1px solid;
