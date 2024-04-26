@@ -18,7 +18,19 @@
     color: #fff;
     display: flex;
   }
-  
+  @media screen and (max-width: 600px) {
+    .neontext {
+      font-size: 1.4rem;
+    }
+  }
+  .homec{
+    margin-top: 4em;
+  }
+  @media screen and (max-width: 600px) {
+    .homec {
+      width: 12em !important;
+    }
+  }
   @keyframes neon {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow: 
