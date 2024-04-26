@@ -34,7 +34,11 @@
     .data{
       width: none;
       margin-left: 0%;
-      display: contents;
+      /* display: contents; */
       border: 1px solid;
+      box-shadow: 10px 0px 10px 0px deeppink;
+    }
+    .head{
+        display: contents;
     }
   }

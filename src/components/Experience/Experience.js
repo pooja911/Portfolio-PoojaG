@@ -27,7 +27,7 @@ const Experience = () => {
     <>
      <Container fluid className="project-section">
       <div className={`${styles.exp} project-card`}>
-        <h2>Experience</h2>
+        <h2 className={`${styles.head} `} >Experience</h2>
         {experiences.map((exp, index) => (
           <div key={index} className={`${styles.data} project-card-view`}>
             <h3>{exp.company}</h3>
