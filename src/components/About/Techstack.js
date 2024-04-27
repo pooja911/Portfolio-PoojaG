@@ -11,47 +11,63 @@ import {
   DiPhp,
   DiCss3,
   DiDatabase,
-  DiMysql
+  DiMysql,
 } from "react-icons/di";
-import styles from './About.module.css';
+import styles from "./About.module.css";
+// import { Tooltip } from 'react-tooltip';
+// import Tooltip from '@mui/material/Tooltip';
+import { Tooltip } from "@mui/material";
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px", color: 'deeppink' }}>
-      <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
-        <DiPython />
-      </Col>
+    <Row
+      style={{justifyContent: "center",paddingBottom: "50px", color: "deeppink", }}>
+      <Tooltip title="Python" placement="bottom" arrow>
+        <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
+          <DiPython />
+        </Col>
+      </Tooltip>
+      <Tooltip title="Javascript" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiJavascript1 />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="React" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiReact />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="C++" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <CgCPlusPlus />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="PHP" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiPhp />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="CodeIgnitor" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiCodeigniter />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="Git" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiGit />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="HTML" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiHtml5 />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="CSS" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiCss3 />
-      </Col>
+      </Col></Tooltip>
+      <Tooltip title="Database" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiDatabase />
       </Col>
+      </Tooltip>
+      <Tooltip title="Mysql" placement="bottom" arrow>
       <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
         <DiMysql />
-      </Col>
-
+      </Col></Tooltip>
     </Row>
   );
 }
