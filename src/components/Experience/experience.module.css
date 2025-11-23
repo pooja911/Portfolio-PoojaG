@@ -1,6 +1,6 @@
 .timelineContainer {
   background: black;
-  padding: 70px 40px;
+  padding: 8em 40px;
   color: white;
 }
 
@@ -171,39 +171,4 @@
   line-height: 1.5;
   opacity: 0.9;
 }
-/* Fix layout for tablet/iPad screens */
-@media (min-width: 769px) and (max-width: 1300px) {
-  .timelineItem {
-    width: 100%;
-    padding: 20px 20px;
-    margin-bottom: 13rem;
-  }
 
-  /* Move the vertical timeline line slightly left */
-  .timeline::before {
-    left: 1%;
-    transform: translateX(0);
-  }
-
-  .left,
-  .right {
-    left: 0 !important;
-  }
-.node {
-  position: absolute;
-  top: 3em;
-  width: 20px;
-  height: 20px;
-  background: deeppink;
-  border-radius: 50%;
-  box-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
-  z-index: 10;
-}
-
-  /* Reposition nodes relative to new timeline line */
-  .left .node,
-  .right .node {
-    left: 5%;
-    transform: translateX(-50%);
-  }
-}
