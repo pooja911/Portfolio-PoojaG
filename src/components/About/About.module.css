@@ -1,109 +1,135 @@
-
-.headtext{
-    font-size: 1.7em;
-    padding-bottom: 20px;
-    font-family: system-ui;;
+/* ================================
+   HEADINGS  
+================================ */
+.headtext {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  padding-bottom: 20px;
+  font-family: system-ui;
+  text-align: center;
+  color: #F535AA;
 }
 
-.itetx{
+.itetx {
+  text-align: center;
+  color: #F535AA;
+}
+
+
+/* ================================
+   TEXT COLUMN (LEFT SIDE)
+================================ */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 4rem) 1rem;
+}
+
+
+/* ================================
+   IMAGE COLUMN (RIGHT SIDE)
+================================ */
+.imgset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+.laptopImg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ================================
+   ABOUT CARD TEXT
+================================ */
+.cardTxt {
+  text-align: justify;
+  font-family: system-ui;
+  font-size: 1rem;
+}
+
+
+/* ================================
+   TECH STACK ICONS
+================================ */
+.TechImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border: 1.4px solid purple;
+  border-radius: 0.2em;
+  margin: 1em 0.8em;
+  padding: 0.5em;
+  width: clamp(70px, 15vw, 120px);
+  height: clamp(70px, 15vw, 120px);
+  color: deeppink;
+}
+
+
+/* ================================
+   CARD COLORS
+================================ */
+.cardcolor {
+  background-color: black !important;
+  color: #F535AA !important;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE FIXES
+================================ */
+@media screen and (max-width: 768px) {
+  .textCol {
+    padding-top: 2rem;
     text-align: center;
-    color: #F535AA ;
+  }
 
-}
-.imgset{
-    padding-top: 9em;
-    /* padding-bottom: 50px; */
-    padding-left: 5em;
-}
-@media screen and (max-width: 600px) {
-    .imgset{
-        padding-top: 0%;
-    }
-}
-.cardTxt{
-    text-align: justify;
-    font-family: system-ui;;
-    font-size: 0.8em;
-}
-.TechImg{
-    display: flex;
-    font-size: 2em;
-    border: 1.4px solid purple;
-    /* height: 4em; */
-    justify-content: center;
-    vertical-align: middle;
-    border-radius: 0.2em;
-    flex: 0 0 auto;
-    width: 16.66666667%;
-    margin: 1em;
-    height: 1.5em;
-    padding-top: 0.2em;
+  .imgset {
+    padding: 2rem 0;
+  }
+
+  .cardTxt {
+    font-size: 0.9rem;
+  }
 }
 
-.laptopImg{
-    max-width: 86%;
-    height: auto;
-    padding-left: 7em;
-}
 
-.cardcolor{
-    background-color: black !important;
-    color: #F535AA  !important;
-}
+/* ================================
+   OPTIONAL NEON EFFECT / ANIMATION
+================================ */
 .neonText {
-    color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #5271ff,
-        0 0 82px #5271ff,
-        0 0 92px #5271ff,
-        0 0 102px #5271ff,
-        0 0 151px #5271ff;
-    }
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #5271ff,
+    0 0 82px #5271ff,
+    0 0 92px #5271ff,
+    0 0 102px #5271ff,
+    0 0 151px #5271ff;
+}
 
-   
-    
-  body {
-    font-size: 18px;
-    font-family: "Yellowtail", sans-serif;
-    background-color: #010a01;
-  }  
-  
-  h1, h2 {
-    text-align: center;
-    font-weight: 400;
+/* Optional glow animation for headers */
+@keyframes pulsate {
+  100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #5271ff,
+      0 0 80px #5271ff,
+      0 0 90px #5271ff,
+      0 0 100px #5271ff,
+      0 0 150px #5271ff;
   }
-    
-  h1 {
-      font-size: 5.2rem;
-      animation: pulsate 0.11s ease-in-out infinite alternate;     
-  }
-    
-  h2 {
-      font-size: 1.8rem;
-  }
-  
-  @keyframes pulsate {
-      
-    100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #5271ff,
-        0 0 80px #5271ff,
-        0 0 90px #5271ff,
-        0 0 100px #5271ff,
-        0 0 150px #5271ff;
-    
-    }
-    
-    0% {
-  
-      text-shadow:
+  0% {
+    text-shadow:
       0 0 4px #fff,
       0 0 10px #fff,
       0 0 18px #fff,
@@ -112,6 +138,41 @@
       0 0 80px #5271ff,
       0 0 94px #5271ff,
       0 0 140px #5271ff;
+  }
+}
+/* Fix layout for tablet screens like iPad Pro */
+@media screen and (min-width: 900px) and (max-width: 1366px) {
   
-    }
+  .textCol {
+    padding: 1.5rem 1rem;
+    max-width: 60%;
+  }
+
+  .imgset {
+    padding: 1.5rem 1rem;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .laptopImg {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+/* Fix layout for tablet screens */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .textCol {
+    padding: 2rem 1rem;
+  }
+
+  .imgset {
+    padding: 2rem 1rem;
+  }
+
+  .laptopImg {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }

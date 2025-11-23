@@ -9,36 +9,32 @@ function About() {
   return (
     <Container fluid className="about-section">
       <Container>
-        <Row style={{ justifyContent: "center" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "8em",
-              // paddingBottom: "50px",
-            }}
-          >
-            <h3 className={`${styles.headtext} ${styles.itetx}`}>
+
+        <Row className="align-items-center justify-content-center">
+  <Col lg={6} md={6} sm={12} className={styles.textCol}>
+
+            <h3 className={styles.headtext}>
               Know Who <strong className="purple">I'M</strong>
             </h3>
             <Aboutcard />
           </Col>
-          <Col md={5} className={`${styles.imgset} about-img`}>
+
+          {/* Right Image Column */}
+  <Col lg={4} md={5} sm={12} className={styles.imgset}>
             <img
               src={laptopImg}
               alt="about"
-              className={`${styles.laptopImg}`}
+              className={styles.laptopImg}
             />
           </Col>
+
         </Row>
-        <h3 className={`${styles.headtext} ${styles.itetx}`}>
-          Professional <strong className="purple">Skillset </strong>
+
+        <h3 className={styles.headtext}>
+          Professional <strong className="purple">Skillset</strong>
         </h3>
 
         <Techstack />
-        {/* <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1> */}
       </Container>
     </Container>
   );

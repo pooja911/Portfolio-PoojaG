@@ -11,10 +11,13 @@
     font-family: 'Pacifico', cursive;
   } */
 
-  .headCont
-  {
-    padding: 9em;
-  }
+  .headCont {
+  min-height: 100vh;
+  padding: clamp(1rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   @media screen and (max-width: 600px) {
    .headCont{
     display: flex;
@@ -24,6 +27,17 @@
    }
 
   }
+  @media screen and (max-width: 768px) {
+  .headCont {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+  .homec {
+    margin-top: 2rem;
+  }
+}
+
   .neontext {
     animation: neon 3s infinite alternate;
     /* text-align: center; */

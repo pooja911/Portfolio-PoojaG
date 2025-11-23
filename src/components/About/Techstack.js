@@ -21,7 +21,7 @@ import { Tooltip } from "@mui/material";
 function Techstack() {
   return (
     <Row
-      style={{justifyContent: "center",paddingBottom: "50px", color: "deeppink", }}>
+      style={{justifyContent: "center",paddingBottom: "12em", color: "deeppink", }}>
       <Tooltip title="Python" placement="bottom" arrow>
         <Col xs={4} md={2} className={`${styles.TechImg} tech-icons`}>
           <DiPython />

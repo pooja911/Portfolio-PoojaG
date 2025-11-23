@@ -1,26 +1,31 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
-import styles from './About.module.css';
-
+import styles from "./About.module.css";
 
 function AboutCard() {
   return (
-    <Card className={  ` ${styles.cardcolor} `}>
-      <Card.Body className={  ` ${styles.cardcolor}`}>
+    <Card className={` ${styles.cardcolor} `}>
+      <Card.Body className={` ${styles.cardcolor}`}>
         <blockquote className="blockquote mb-0">
-          <p className={`${styles.cardTxt}` }>
+          <p className={`${styles.cardTxt}`}>
             Hi Everyone, I am <span className="purple">Pooja Garg </span>
             from <span className="purple"> Pune, India.</span>
             <br />
-            I'm  currently  enrolled in a master's program in computer science at Paderborn University.   <br />
-            Up until September 2023, I worked as a software engineer for PayU, gaining more than 1.7 years of work experience.
-            Prior to that, I interned with the same firm as a software engineer Intern while pursuing my bachelor's degree, and later, I was hired on as a full-time employee.
+            I am a Master’s student in Computer Science at Paderborn University,
+            with a strong foundation in full-stack development, AI tooling, and
+            data-driven systems. Over the past few years, I have worked
+            extensively across modern web technologies, scalable backend
+            architectures, data synchronization workflows, and production-ready
+            deployment pipelines.
             <br />
-            
-            I have completed Bachelor's in Information Technology from Pune Universitry, India with an overall CGPA of 9.06 and an german grade of 1.4!
-            <br />
-            
+            My background spans building intelligent interfaces for simulation
+            systems, designing multimodal data pipelines for automotive
+            perception, crafting interactive dashboards, integrating REST APIs,
+            and delivering solutions using React, FastAPI, Python, Docker, and
+            cloud-based workflows. <br />
+           Alongside industry experience, I hold a Bachelor’s degree in Information Technology from Pune University, graduating with a CGPA of 9.06 (German equivalent 1.4). I’m passionate about creating clean, modular, and reliable software—whether it’s AI-enhanced applications, automation pipelines, or scalable web systems—while continuously exploring opportunities to innovate and learn.
+            <br/>
             {/* Apart from coding, some other activities that I love to do! */}
           </p>
           {/* <ul>
