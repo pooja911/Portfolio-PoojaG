@@ -9,7 +9,7 @@ import "./style.css";
 import NavBar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
 import Footer from "./Footer";
-
+// app
 function App() {
   return (
     <Router>
