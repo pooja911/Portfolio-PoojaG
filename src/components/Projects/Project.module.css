@@ -1,0 +1,299 @@
+.projCont {
+  min-height: 100vh;
+  padding: clamp(5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem) 4rem;
+  width: 100%;
+}
+
+.neontext {
+  animation: neon 3s infinite alternate;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .neontext { font-size: 1.4rem; }
+}
+@keyframes neon {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: #fff 0 0 12px, #A91079 0 0 25px, #A91079 0 0 35px, #A91079 0 0 45px;
+  }
+  20%, 24%, 55% { text-shadow: none; }
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.chip {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  padding: 0.3em 1em;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.chip:hover {
+  border-color: #666;
+  color: #ccc;
+}
+.chipActive {
+  border-color: deeppink !important;
+  color: deeppink !important;
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
+}
+
+/* Full-width grid — does NOT inherit Bootstrap column constraints */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Single card: cap at 600px and centre it so it doesn't stretch full-width */
+.grid:has(.card:only-child) {
+  grid-template-columns: minmax(300px, 600px);
+  justify-content: center;
+}
+
+/* Two cards side by side */
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #0a0a0a;
+  border: 1px solid rgba(169, 16, 121, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  /* prevent card from stretching taller than its content when grid rows align */
+  align-self: start;
+}
+.card:hover {
+  border-color: rgba(255, 20, 147, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 20, 147, 0.12);
+}
+.cardOpen {
+  border-color: deeppink !important;
+  box-shadow: 0 0 0 1px rgba(255, 20, 147, 0.2);
+  transform: none !important;
+}
+
+.topBar {
+  height: 3px;
+  background: deeppink;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover .topBar,
+.cardOpen .topBar {
+  opacity: 1;
+}
+
+.cardInner {
+  padding: 1.4rem;
+}
+
+.cardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(169, 16, 121, 0.12);
+  border: 1px solid rgba(169, 16, 121, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: deeppink;
+  flex-shrink: 0;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  color: #555;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 7px #2ecc71;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  color: #888;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+.tag {
+  background: transparent;
+  border: 1px solid #222;
+  color: #666;
+  font-size: 0.68rem;
+  padding: 0.18em 0.6em;
+  border-radius: 1rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.card:hover .tag,
+.cardOpen .tag {
+  border-color: #333;
+  color: #888;
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: deeppink;
+  border: 1px solid deeppink;
+  padding: 0.25em 0.8em;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: inset 0 0 6px rgba(255, 20, 147, 0.1), 0 0 6px rgba(255, 20, 147, 0.1);
+  transition: all 0.15s;
+  background: transparent;
+}
+.btn:hover {
+  background: deeppink;
+  color: #000;
+  box-shadow: 0 0 14px rgba(255, 20, 147, 0.5);
+}
+
+.expandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #141414;
+}
+.expandLabel {
+  font-size: 0.7rem;
+  color: #444;
+  transition: color 0.2s;
+}
+.card:hover .expandLabel { color: #666; }
+.cardOpen .expandLabel { color: deeppink; }
+
+.chevron {
+  color: #444;
+  transition: transform 0.3s, color 0.2s;
+}
+.chevronOpen {
+  transform: rotate(180deg);
+  color: deeppink;
+}
+
+.detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+.detailOpen {
+  max-height: 800px;
+}
+
+.detailInner {
+  padding: 0 1.4rem 1.4rem;
+}
+
+.highlight {
+  color: #ccc;
+  font-size: 0.78rem;
+  background: rgba(169, 16, 121, 0.08);
+  border: 1px solid rgba(169, 16, 121, 0.22);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.detailSection {
+  margin-bottom: 1rem;
+}
+.detailTitle {
+  font-size: 0.67rem;
+  color: #A91079;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+}
+.detailText {
+  font-size: 0.78rem;
+  color: #999;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.metaItem {
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+.metaLabel {
+  font-size: 0.65rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+.metaVal {
+  font-size: 0.78rem;
+  color: #ccc;
+}

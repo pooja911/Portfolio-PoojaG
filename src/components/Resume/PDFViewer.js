@@ -4,7 +4,7 @@ import pdf from "../../Assets/../Assets/PoojaGargResume.pdf";
 
 const PDFViewer = () => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  // const [pageNumber, setPageNumber] = useState(1);
   const containerRef = useRef(null);
   const pageWidthRef = useRef(null);
   const pageHeightRef = useRef(null);

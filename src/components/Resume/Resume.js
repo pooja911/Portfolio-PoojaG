@@ -3,16 +3,16 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import pdf from "../../Assets/PoojaGargResume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page } from "react-pdf";
+import { Document } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import PDFViewer from "./PDFViewer";
+// import PDFViewer from "./PDFViewer";
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
 
   const [width, setWidth] = useState(1200);
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  // const [pageNumber, setPageNumber] = useState(1);
 
   const handleDownload = () => {
     const pdfUrl = pdf;
@@ -50,8 +50,8 @@ function ResumeNew() {
             onLoadSuccess={onDocumentLoadSuccess}
             className="d-flex justify-content-center"
           >
-            <Page pageNumber={pageNumber}  />
-            {numPages && <Page pageNumber={pageNumber + 1} />}
+            {/* <Page pageNumber={pageNumber}  />
+            {numPages && <Page pageNumber={pageNumber + 1} />} */}
           </Document>
           {/* <PDFViewer/> */}
         </Row>

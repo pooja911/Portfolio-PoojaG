@@ -1,14 +1,14 @@
-// import logo from './logo.svg';
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Resume from "./components/Resume/Resume";
+// import Resume from "./components/Resume/Resume";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import NavBar from "./components/Navbar/Navbar";
 import Experience from "./components/Experience/Experience";
+import Project from "./components/Projects/Project";
 import Footer from "./Footer";
 
 function App() {
@@ -19,10 +19,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Project />} />
           <Route path="/ProfessionalExposure" element={<Experience />} />
-          {/* <Route path="/resume" element={<Resume />}  /> */}
+          {/* <Route path="/resume" element={<Resume />} /> */}
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
