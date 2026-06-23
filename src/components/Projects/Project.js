@@ -66,18 +66,18 @@ const FILTERS = [
   { label: "React", value: "react" },
 ];
 
-const ProjectCard = ({ project }) => {
-  const [open, setOpen] = useState(false);
-
+const ProjectCard = ({ project, open, onToggle }) => {
   return (
     <div
       className={`${styles.card} ${open ? styles.cardOpen : ""}`}
-      onClick={() => setOpen((o) => !o)}
+      onClick={onToggle}
     >
       <div className={styles.topBar} />
+
       <div className={styles.cardInner}>
         <div className={styles.cardHead}>
           <div className={styles.cardIcon}>{project.icon}</div>
+
           {project.live && (
             <div className={styles.status}>
               <span className={styles.dot} />
@@ -85,50 +85,107 @@ const ProjectCard = ({ project }) => {
             </div>
           )}
         </div>
+
         <h3 className={styles.cardTitle}>{project.title}</h3>
-        <p className={styles.cardDesc}>{project.shortDesc}</p>
+
+        <p className={styles.cardDesc}>
+          {project.shortDesc}
+        </p>
+
         <div className={styles.tags}>
           {project.tech.map((t) => (
-            <span key={t} className={styles.tag}>{t}</span>
+            <span key={t} className={styles.tag}>
+              {t}
+            </span>
           ))}
         </div>
-        <div className={styles.links} onClick={(e) => e.stopPropagation()}>
+
+        <div
+          className={styles.links}
+          onClick={(e) => e.stopPropagation()}
+        >
           {project.github && (
-            <a href={project.github} target="_blank" rel="noreferrer" className={styles.btn}>
-              <AiOutlineGithub size={14} /> GitHub
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.btn}
+            >
+              <AiOutlineGithub size={14} />
+              GitHub
             </a>
           )}
+
           {project.demo && (
-            <a href={project.demo} target="_blank" rel="noreferrer" className={styles.btn}>
-              <FiExternalLink size={13} /> Live Demo
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.btn}
+            >
+              <FiExternalLink size={13} />
+              Live Demo
             </a>
           )}
         </div>
+
         <div className={styles.expandRow}>
-          <span className={styles.expandLabel}>{open ? "Collapse" : "Details"}</span>
+          <span className={styles.expandLabel}>
+            {open ? "Collapse" : "Details"}
+          </span>
+
           <FiChevronDown
             size={16}
-            className={`${styles.chevron} ${open ? styles.chevronOpen : ""}`}
+            className={`${styles.chevron} ${
+              open ? styles.chevronOpen : ""
+            }`}
           />
         </div>
       </div>
 
-      <div className={`${styles.detail} ${open ? styles.detailOpen : ""}`}>
+      <div
+        className={`${styles.detail} ${
+          open ? styles.detailOpen : ""
+        }`}
+      >
         <div className={styles.detailInner}>
-          <div className={styles.highlight}>{project.highlight}</div>
-          <div className={styles.detailSection}>
-            <div className={styles.detailTitle}>What it does</div>
-            <p className={styles.detailText}>{project.whatItDoes}</p>
+          <div className={styles.highlight}>
+            {project.highlight}
           </div>
+
           <div className={styles.detailSection}>
-            <div className={styles.detailTitle}>Architecture</div>
-            <p className={styles.detailText}>{project.architecture}</p>
+            <div className={styles.detailTitle}>
+              What it does
+            </div>
+
+            <p className={styles.detailText}>
+              {project.whatItDoes}
+            </p>
           </div>
+
+          <div className={styles.detailSection}>
+            <div className={styles.detailTitle}>
+              Architecture
+            </div>
+
+            <p className={styles.detailText}>
+              {project.architecture}
+            </p>
+          </div>
+
           <div className={styles.metaGrid}>
             {project.meta.map((m) => (
-              <div key={m.label} className={styles.metaItem}>
-                <div className={styles.metaLabel}>{m.label}</div>
-                <div className={styles.metaVal}>{m.value}</div>
+              <div
+                key={m.label}
+                className={styles.metaItem}
+              >
+                <div className={styles.metaLabel}>
+                  {m.label}
+                </div>
+
+                <div className={styles.metaVal}>
+                  {m.value}
+                </div>
               </div>
             ))}
           </div>
@@ -137,10 +194,9 @@ const ProjectCard = ({ project }) => {
     </div>
   );
 };
-
 const Project = () => {
   const [activeFilter, setActiveFilter] = useState("all");
-
+const [openProject, setOpenProject] = useState(null);
   const filtered = projectsData.filter(
     (p) => activeFilter === "all" || p.tags.includes(activeFilter)
   );
@@ -166,12 +222,22 @@ const Project = () => {
             </button>
           ))}
         </div>
-
-        <div className={styles.grid}>
-          {filtered.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+          <div className={styles.grid}>
+  {filtered.map((project) => (
+    <ProjectCard
+      key={project.id}
+      project={project}
+      open={openProject === project.id}
+      onToggle={() =>
+        setOpenProject(
+          openProject === project.id
+            ? null
+            : project.id
+        )
+      }
+    />
+  ))}
+</div>
       </div>
     </section>
   );

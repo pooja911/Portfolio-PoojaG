@@ -81,6 +81,7 @@
   cursor: pointer;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
+  height: 100%;
   /* prevent card from stretching taller than its content when grid rows align */
   align-self: start;
 }
