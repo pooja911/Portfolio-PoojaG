@@ -13,7 +13,7 @@
 }
 
 .timeline {
-  position: relative;
+  position: sticky;
   width: 100%;
   margin: auto;
   padding: 20px 0;
