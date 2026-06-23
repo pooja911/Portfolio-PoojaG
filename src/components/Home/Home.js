@@ -4,6 +4,7 @@ import homeLogo from "../../Assets/wordpress-developer.png";
 import style from "./Home.module.css";
 import Type from './Type';
 
+
 const Home = () => {
   return (
    <section>

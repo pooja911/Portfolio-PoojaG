@@ -5,6 +5,7 @@ import laptopImg from "../../Assets/about.png";
 import styles from "./About.module.css";
 import Techstack from "./Techstack";
 
+
 function About() {
   return (
     <Container fluid className="about-section">
