@@ -28,7 +28,7 @@ const projectsData = [
     ],
     tech: ["Node.js", "Express", "React 19", "Vite", "Groq AI", "Llama 3.3 70B", "Octokit", "Webhooks", "HMAC-SHA256", "dotenv", "CORS"],
     github: "https://github.com/pooja911/Ai-Code-Reviewer",
-    demo: "https://auto-ai-code-review.netlify.app/",
+    demo: "https://ai-code-reviewer1.netlify.app/",
     live: true,
   },
   {
